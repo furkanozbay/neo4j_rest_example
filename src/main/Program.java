@@ -9,6 +9,6 @@ public class Program {
     private static String password = "neo4j_password"; // default: neo4j
 
     public static void main(String[] args) {
-        new DbOperation(url, userName, password).test();
+        new DbOperation(url, userName, password).getNodes();
     }
 }

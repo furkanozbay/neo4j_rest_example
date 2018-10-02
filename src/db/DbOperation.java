@@ -25,7 +25,7 @@ public class DbOperation {
         this.password = password;
     }
 
-    public void test() {
+    public void getNodes() {
         RestAPI graphDb = new RestAPIFacade(url, userName, password);
         QueryEngine engine = new RestCypherQueryEngine(graphDb);
 
@@ -33,8 +33,8 @@ public class DbOperation {
         Iterator<Map<String, Object>> iterator = result.iterator();
         System.out.println("Querying");
         if (iterator.hasNext()) {
-            Map<String, Object> row = iterator.next();
-            System.out.println("Total nodes: " + row.get("total"));
+            Map<String, Object> node = iterator.next();
+            // do something
         }
     }
 }
